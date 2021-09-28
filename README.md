@@ -456,3 +456,6 @@ Response:
 
 }
 ```
+
+For send mail for perticular post
+php artisan mail:send post_id
