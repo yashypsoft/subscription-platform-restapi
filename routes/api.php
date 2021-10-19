@@ -14,18 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /* User Routes */
-Route::resource('users', 'UserController', ['only' => ['index', 'store']]);
-Route::get('user/{id}', 'UserController@findOne');
-
+Route::apiResource('users', 'UserController');
 
 /*Website Routes */
-Route::resource('websites', 'WebsiteController', ['only' => ['index', 'store',]]);
-Route::get('website/{id}', 'WebsiteController@findOne');
+Route::apiResource('websites', 'WebsiteController');
 
 /* Post Routes */
-Route::resource('posts', 'PostController', ['only' => ['index', 'store']]);
-Route::get('post/{id}', 'PostController@findOne');
-
+Route::apiResource('posts', 'PostController');
 
 /* Subscribe */
 Route::Post('websites/subscribes', 'WebsiteController@subscribe');
